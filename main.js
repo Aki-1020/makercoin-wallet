@@ -23,19 +23,19 @@ const {
 } = require('@octokit/rest')
 const semver = require('semver')
 const packageJson = require('./package.json');
-const Pandanite = require('pandanite-js');
+const Pandanite = require('makercoin-js');
 
 const EventEmitter = require('events');
 EventEmitter.prototype._maxListeners = 100;
 
 const socketEvent = new EventEmitter();
 
-const pandaniteCrypto = new Pandanite.crypto();
+const pandaniteCrypto = new MakerCoin.crypto();
 
 const pandaniteAppVersion = 'v' + packageJson.version;
 
 const octokit = new Octokit({
-    userAgent: 'Pandanite Wallet ' + pandaniteAppVersion,
+    userAgent: 'MakerCoin Wallet ' + pandaniteAppVersion,
     baseUrl: 'https://api.github.com',
     request: {
         agent: undefined,
@@ -109,7 +109,7 @@ const i18n = new(require('i18n-2'))({
     extension: '.json'
 });
 
-var peers = ['https://pandanite.net'];
+var peers = ['http://212.147.106.225:3001'];
 var randomPeer = randomIntFromInterval(0, (peers.length - 1));
 var selectedPeer = peers[randomPeer];
 var isConnected = false

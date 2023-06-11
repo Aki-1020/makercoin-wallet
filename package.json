@@ -1,7 +1,7 @@
 {
-  "name": "Pandanite-Wallet",
+  "name": "makercoin-wallet",
   "version": "1.0.7",
-  "description": "Electron Based Wallet for Pandanite",
+  "description": "Electron Based Wallet for MakerCoin",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,10 +12,9 @@
     "makelinux": "electron-forge make --platform linux",
     "fix": "electron-fix start"
   },
-  "repository": "https://github.com/mrmikeo/pandanite-wallet",
+  "repository": "https://github.com/Aki-1020/makercoin-wallet",
   "keywords": [
-    "Pandanite",
-    "Bamboo",
+    "MakerCoin",
     "Wallet",
     "Electron"
   ],
@@ -35,7 +34,7 @@
     "i18n-2": "^0.7.3",
     "jquery": "^3.6.4",
     "nedb-promises": "^6.1.0",
-    "pandanite-js": "git+https://github.com/pandanite-crypto/pandanite-js.git",
+    "pandanite-js": "git+https://github.com/Aki-1020/makercoin-js.git",
     "popper.js": "^1.16.1",
     "portfinder": "^1.0.32",
     "qrcode": "^1.5.1",
@@ -90,10 +89,10 @@
         {
           "name": "@electron-forge/maker-wix",
           "config": {
-            "name": "Pandanite Wallet",
+            "name": "MakerCoin Wallet",
             "icon": "./icons/win/icon.ico",
             "language": 1033,
-            "manufacturer": "Pandanite Wallet"
+            "manufacturer": "MakerCoin Wallet"
           }
         }
       ]
