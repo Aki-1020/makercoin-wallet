@@ -23,7 +23,7 @@ const {
 } = require('@octokit/rest')
 const semver = require('semver')
 const packageJson = require('./package.json');
-const Pandanite = require('makercoin-js');
+const MakerCoin = require('makercoin-js');
 
 const EventEmitter = require('events');
 EventEmitter.prototype._maxListeners = 100;
@@ -110,6 +110,7 @@ const i18n = new(require('i18n-2'))({
 });
 
 var peers = ['http://212.147.106.225:3001'];
+// var peers = ['http://10.0.4.1:3001'];
 var randomPeer = randomIntFromInterval(0, (peers.length - 1));
 var selectedPeer = peers[randomPeer];
 var isConnected = false
